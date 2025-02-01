@@ -41,7 +41,7 @@ body {
 #container {
   width: 100%;
   max-width: 580px;
-  
+
   margin: 56px auto 0;
   padding: 0px 24px;
 }
@@ -130,7 +130,7 @@ ul li a:hover {
 }
 
 #social-links {
-  margin-top: ;
+  margin-top: 10;
   display: flex;
   justify-content: center;
   gap: 16px;
