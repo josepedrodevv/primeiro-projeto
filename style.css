@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "Inter", serif;
+  color: var(--color-white);
+}
+
+:root {
+  --color-white: white;
+  --bg-imageDark: url(./assets/assets/bg-desktop.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --hover-color: rgba(255, 255, 255, 0.2);
+  --switch: url(./assets/assets/moon-stars.svg);
+  --left: 0;
+}
+
+.light {
+  --color-white: black;
+  --bg-imageDark: url(./assets/assets/bg-desktop-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --hover-color: rgba(0, 0, 0, 0.1);
+  --switch: url(./assets/assets/sun.svg);
+  --left: right 0;
+}
+
+body {
+  background-image: var(--bg-imageDark);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container {
+  width: 540px;
+  margin: auto;
+  padding: 0px 24px;
+}
+
+#profile {
+  padding: 30px;
+  text-align: center;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  margin: 5px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 0;
+  border-radius: 50%;
+  background-image: var(--switch);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  position: absolute;
+  left: var(--left);
+  z-index: 1;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none;
+  display: flex; /* propriedade para organizar o container               */
+  flex-direction: column; /*  muda a direção que por padrão já vem em row (inline) aqui coloquei coluna              */
+  gap: 16px; /* aumenta a distância de um elemento a outro horizontal e vertical               */
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.4s;
+}
+ul li a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul li:hover {
+  background-color: var(--surface-color);
+  border: 1px solid var(--color-white);
+}
+
+ul li a:hover {
+  color: black;
+}
+
+#social-links {
+  margin-top: ;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.6s;
+}
+
+#social-links a:hover {
+  background-color: var(--hover-color);
+}
+
+footer {
+  padding: 18px;
+  font-size: 16px;
+  text-align: center;
+}
